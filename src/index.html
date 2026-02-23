@@ -2,12 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularSignalForm</title>
+  <title>Angular cafe - Signal form</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+        name="viewport">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="apple-mobile-web-app-title" content="Peformi CRM">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate">
+  <link rel="shortcut icon" type="image/x-icon" href="images/angular-cafe.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="developer" content="Designed and Developed by Omid khosrojerdi - email: omidkh68@gmail.com">
+  <style>
+    .loader {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-block;
+      border-top: 4px solid rgb(122, 94, 225);
+      border-right: 4px solid transparent;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+
+    .loader::after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border-left: 4px solid rgb(90, 208, 226);
+      border-bottom: 4px solid transparent;
+      animation: rotation 0.5s linear infinite reverse;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
-<body>
-  <app-root></app-root>
+<body
+  class="mat-typography bg-gray-200/70 dark:bg-neutral-900 w-screen lg:h-screen lg:overflow-hidden antialiased scroll-smooth font-sans font-normal">
+<app-root class="font-sans h-fit lg:h-screen">
+  <div class="flex items-center justify-center w-full h-full">
+    <div class="loader"></div>
+  </div>
+</app-root>
+<noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
