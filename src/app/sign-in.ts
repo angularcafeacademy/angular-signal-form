@@ -7,8 +7,16 @@ import {form, FormField, submit} from '@angular/forms/signals';
 import {JsonPipe} from '@angular/common';
 
 @Component({
-  selector: 'app-root',
+  selector: 'sign-in',
   templateUrl: './sign-in.html',
+  styles: `
+    :host {
+      display: flex;
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 0;
+    }
+  `,
   imports: [
     FormField,
     JsonPipe

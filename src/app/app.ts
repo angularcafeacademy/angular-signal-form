@@ -1,0 +1,44 @@
+import {Component, signal} from '@angular/core';
+import {SignIn} from './sign-in';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <aside class="flex flex-col min-h-screen">
+      <!-- Header -->
+      <header
+        class="w-full px-4 py-3 bg-white dark:bg-zinc-800 border-b border-stone-300 dark:border-zinc-700 flex justify-between items-center shadow-sm gap-4">
+        <img src="images/angular-cafe.png" alt="Angular Cafe" class="h-10">
+        <h1 class="text-xs lg:text-lg font-semibold text-stone-700 dark:text-stone-200 mr-auto">
+          {{ title() }}
+        </h1>
+        <a href="https://github.com/angularcafeacademy/angular-signal-form" target="_blank"
+           class="flex items-center gap-2 px-3 py-1.5 bg-black text-white rounded-lg text-sm hover:bg-stone-800 transition-colors shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4"
+               viewBox="0 0 24 24">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.85 10.95.57.1.77-.25.77-.55v-2.03c-3.19.69-3.86-1.54-3.86-1.54-.52-1.34-1.27-1.7-1.27-1.7-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.2-3.08-.12-.3-.52-1.53.11-3.2 0 0 .98-.31 3.2 1.18a11.09 11.09 0 0 1 2.92-.39c.99 0 1.99.13 2.92.39 2.21-1.5 3.19-1.18 3.19-1.18.63 1.67.23 2.9.11 3.2.75.8 1.2 1.83 1.2 3.08 0 4.42-2.69 5.38-5.25 5.66.42.37.78 1.1.78 2.23v3.3c0 .31.2.66.78.55A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+          </svg>
+          Back to Repo
+        </a>
+      </header>
+
+      <!-- component -->
+      <sign-in class="flex-1 block"/>
+
+      <!-- Footer -->
+      <footer
+        class="w-full py-3 px-4 bg-white dark:bg-zinc-800 border-t border-stone-200 dark:border-zinc-700 text-center text-sm text-stone-500 dark:text-stone-400">
+        Made with ❤️ by <a href="https://t.me/angularcafe"
+                           class="underline hover:text-stone-700 dark:hover:text-white">Angular
+        Cafe</a>
+      </footer>
+    </aside>
+  `,
+  imports: [
+    SignIn
+  ]
+})
+export class App {
+  protected readonly title = signal('Angular 21 - Signal Form');
+}
